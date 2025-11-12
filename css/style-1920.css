@@ -1,0 +1,269 @@
+html{
+    font-family: 'varesha';
+}
+
+body {
+  margin: 0;
+  background-color: #F9F9F4;
+  font-family: 'varesha';
+  color: #29489F;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 헤더 */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  border-bottom: 1px solid  #29489F;
+}
+
+/* .main-line{
+    border: 1px solid #29489F;
+    width: 1536px;
+    height: auto;
+} */
+
+.icon-left{
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+}
+.center-di{
+    width: 20px;
+    height: 20px;
+}
+.icon-right {
+  width: 40px;
+  height: 40px;
+  margin-right: 55px;
+  line-height: 1.5;
+}
+
+.logo {
+  /* font-family: 'Playfair Display', serif; */
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* 세로 텍스트 */
+
+.line{
+    padding-bottom: 30px;
+}
+.vertical-text {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  /* transform-origin: left top;
+  font-size: 10px; */
+  letter-spacing: 1px;
+  color: #29489F;
+}
+
+/* 메인 콘텐츠 */
+.main {
+  text-align: center;
+  padding-top: 120px;
+  width: 1600px;
+  min-height: 650px;
+  border-left: 1px solid #29489F;
+  border-right: 1px solid #29489F;
+}
+
+.flower{
+  margin-right: 30px;
+}
+
+.subtitle {
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: 'Pretendard';
+  font-weight: 300;
+  margin-top: -50px;
+}
+
+.subtitle span {
+  font-weight: 600;
+  color: #29489F;
+}
+
+.main-title {
+  /* font-family: 'Playfair Display', serif; */
+  font-size: 100px;
+  font-weight: 100;
+  line-height: 1.2;
+  margin: 50px 0 40px;
+}
+
+.inline-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.desc {
+  font-size: 20px;
+  color: #29489F;
+  font-weight: 300;
+  font-family: 'Pretendard';
+}
+
+.contant img{
+margin-top: 55px;
+}
+
+
+/* 하단 키워드 */
+
+/* -------------------- FOOTER: 키워드 애니메이션 -------------------- */
+
+.footer-keywords {
+    width: 1600px;
+    height: 140px;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid  #29489F;
+    border-bottom: 1px solid  #29489F;
+    background: url("../img/gradient.jpg");
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+/* 1. 슬라이드를 위한 트랙 설정 */
+.keywords-track {
+    
+    display: flex;
+    white-space: nowrap; /* 내부 요소들이 줄바꿈되지 않도록 설정 */
+    
+    /* 애니메이션 적용 */
+    animation: scroll-left 15s linear infinite; /* 15초 동안, 일정한 속도로, 무한 반복 */
+}
+
+/* 2. 각 키워드 목록 (복사된 두 세트) */
+.keywords {
+    
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    
+    /* **핵심:** 복사된 키워드 세트가 옆에 붙을 수 있도록 너비를 충분히 확보 */
+    flex-shrink: 0; 
+    padding: 47px 60px;
+    background: url("../img/그라데이션.jpg");
+}
+
+/* 3. 키워드 텍스트 스타일 (이전 요청의 텍스트 선 효과 유지) */
+.keywords span {
+   
+    /* display: inline-block; */
+    /* padding: 0 10px; 단어 간격 조절 */
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Pretendard', sans-serif;
+    
+    /* 이미지와 유사한 폰트 색상 및 선 효과 */
+    /* color: transparent; */
+    -webkit-text-stroke: 1px #29489F; /* 테두리 선 색상 */
+}
+
+ .stroke-text{
+    
+    color: transparent; 
+    -webkit-text-stroke: 1.5px #29489F; 
+    font-size: 48px;
+    font-weight: 700;
+ }
+
+/* 4. 애니메이션 정의: 왼쪽으로 이동 */
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%); /* 시작 위치 */
+    }
+    to {
+        transform: translateX(-50%); /* 트랙의 절반 길이만큼 이동 (복사본 하나만큼 이동) */
+    }
+}
+.aboutme-title{
+    border: 1px solid red;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    
+}
+.aboutme-title h1{
+    font-size: 40px;
+    font-weight: 400;
+}
+/* .aboutme-title p{
+    font-family: 'Pretendard';
+    color: black;
+} */
+.aboutme{
+    display: flex; 
+    gap:100px;
+}
+.aboutme-text{
+    border: 1px solid red;
+    text-align: left;
+    width: 612px;
+    margin-left: 120px;
+    padding: 100px;
+    
+}
+.aboutme-text h3{
+    font-size: 28px;
+    font-weight: 300;
+}
+.aboutme-text p{
+    font-family: 'Pretendard';
+    color: black;
+    font-size: 20px;
+    font-weight: 200;
+    
+}
+.aboutme-img{
+    margin-right: 120px;
+    border: 1px solid red;
+}
+
+/* .footer {
+  width: 1600px;
+  height: 140px;
+  align-items: center;
+  
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid  #29489F;
+  border-bottom: 1px solid  #29489F;
+  background: url("../img/그라데이션.jpg");
+} */
+
+/* .keywords {
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+  padding: 45px 0;
+} */
+ /* .stroke-text{
+    
+    color: transparent; 
+    -webkit-text-stroke: 1.5px #29489F; 
+    font-size: 48px;
+    font-weight: 700;
+ }
+.keywords span {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'Pretendard', sans-serif;
+} */
