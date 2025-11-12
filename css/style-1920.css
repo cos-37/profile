@@ -1,269 +1,328 @@
-html{
+/* ============================================== */
+/* 1. 글로벌 스타일 및 스크롤 고정 */
+/* ============================================== */
+
+html {
     font-family: 'varesha';
+    height: 100%; /* 스크롤 고정 핵심 */
 }
 
 body {
-  margin: 0;
-  background-color: #F9F9F4;
-  font-family: 'varesha';
-  color: #29489F;
+    margin: 0;
+    background-color: #F9F9F4;
+    font-family: 'varesha';
+    color: #29489F;
+    height: 100%; /* 스크롤 고정 핵심 */
+    overflow: hidden; /* 스크롤 고정 핵심: 전체 페이지 스크롤 방지 */
 }
 
 .container {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    position: relative;
+    height: 100vh; /* 뷰포트 높이 전체 사용 */
+    display: flex; /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 자식 요소 중앙 정렬 */
 }
+
+/* ============================================== */
+/* 2. 헤더 및 고정 요소 */
+/* ============================================== */
 
 /* 헤더 */
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 40px;
-  border-bottom: 1px solid  #29489F;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    border-bottom: 1px solid #29489F;
+    position: fixed; /* 고정 */
+    left: 0;
+    top: 0;
+    background: #f9f9f4;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
-/* .main-line{
-    border: 1px solid #29489F;
-    width: 1536px;
-    height: auto;
-} */
-
 .icon-left{
-  width: 50px;
-  height: 50px;
-  margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
 }
 .center-di{
     width: 20px;
     height: 20px;
 }
 .icon-right {
-  width: 40px;
-  height: 40px;
-  margin-right: 55px;
-  line-height: 1.5;
+    width: 40px;
+    height: 40px;
+    margin-right: 55px;
+    line-height: 1.5;
 }
 
 .logo {
-  /* font-family: 'Playfair Display', serif; */
-  font-size: 18px;
-  letter-spacing: 2px;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 
 /* 세로 텍스트 */
-
-.line{
-    padding-bottom: 30px;
-}
 .vertical-text {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: rotate(-90deg) translateY(-50%);
-  /* transform-origin: left top;
-  font-size: 10px; */
-  letter-spacing: 1px;
-  color: #29489F;
+    position: fixed; /* 고정 */
+    left: 10px;
+    top: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    letter-spacing: 1px;
+    color: #29489F;
+    font-weight: 600;
 }
 
-/* 메인 콘텐츠 */
+/* ============================================== */
+/* 3. 메인 콘텐츠 (유동적 너비 & 스크롤 영역) */
+/* ============================================== */
+
 .main {
-  text-align: center;
-  padding-top: 120px;
-  width: 1600px;
-  min-height: 650px;
-  border-left: 1px solid #29489F;
-  border-right: 1px solid #29489F;
+    flex-grow: 1; /* 스크롤 고정 핵심: 남은 공간 차지 */
+    overflow-y: auto; /* 스크롤 고정 핵심: 이 영역만 스크롤 가능 */
+    -ms-overflow-style: none; /* 스크롤바 숨김 (IE) */
+    scrollbar-width: none; /* 스크롤바 숨김 (Firefox) */
+    
+    width: 90%; /* **반응형 핵심:** 유동적인 너비 */
+    max-width: 1600px; /* **반응형 핵심:** 최대 너비 제한 */
+    
+    text-align: center;
+    padding-top: 190px;
+    min-height: 650px;
+    border-left: 1px solid #29489F;
+    border-right: 1px solid #29489F;
+}
+.main::-webkit-scrollbar {
+    display: none; /* 스크롤바 숨김 (Chrome) */
 }
 
 .flower{
-  margin-right: 30px;
+    margin-right: 30px;
 }
 
 .subtitle {
-  font-size: 15px;
-  letter-spacing: 1px;
-  font-family: 'Pretendard';
-  font-weight: 300;
-  margin-top: -50px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: 'Pretendard';
+    font-weight: 300;
+    margin-top: -50px;
 }
 
 .subtitle span {
-  font-weight: 600;
-  color: #29489F;
+    font-weight: 600;
+    color: #29489F;
 }
 
 .main-title {
-  /* font-family: 'Playfair Display', serif; */
-  font-size: 100px;
-  font-weight: 100;
-  line-height: 1.2;
-  margin: 50px 0 40px;
-}
-
-.inline-icon {
-  width: 18px;
-  height: 18px;
+    font-size: 100px;
+    font-weight: 100;
+    line-height: 1.2;
+    margin: 50px 0 40px;
 }
 
 .desc {
-  font-size: 20px;
-  color: #29489F;
-  font-weight: 300;
-  font-family: 'Pretendard';
+    font-size: 20px;
+    color: #29489F;
+    font-weight: 300;
+    font-family: 'Pretendard';
 }
 
 .contant img{
-margin-top: 55px;
+    max-width: 100%; /* 이미지 크기 유동성 확보 */
+    height: auto;
+    margin-top: 55px;
 }
 
-
-/* 하단 키워드 */
-
-/* -------------------- FOOTER: 키워드 애니메이션 -------------------- */
+/* ============================================== */
+/* 4. FOOTER: 키워드 애니메이션 (유동적 너비 & 스타일) */
+/* ============================================== */
 
 .footer-keywords {
-    width: 1600px;
+    flex-shrink: 0; /* 스크롤 고정 핵심: 축소되지 않고 고정 높이 유지 */
     height: 140px;
-    align-items: center;
-    bottom: 0;
-    left: 0;
-    border-top: 1px solid  #29489F;
-    border-bottom: 1px solid  #29489F;
-    background: url("../img/gradient.jpg");
+    
+    width: 100%; /* **반응형 핵심:** 유동적인 너비 */
+    max-width: 1600px; /* **반응형 핵심:** 최대 너비 제한 */
+    
+    border-bottom: 1px solid #29489F;
+    background: url("../img/gradient.jpg"); /* 한글 파일명 변경 권장 */
     overflow: hidden;
     margin-top: 50px;
 }
 
-/* 1. 슬라이드를 위한 트랙 설정 */
 .keywords-track {
-    
     display: flex;
-    white-space: nowrap; /* 내부 요소들이 줄바꿈되지 않도록 설정 */
-    
-    /* 애니메이션 적용 */
-    animation: scroll-left 15s linear infinite; /* 15초 동안, 일정한 속도로, 무한 반복 */
+    white-space: nowrap; 
+    /* JS로 애니메이션 제어 시 CSS 애니메이션은 주석 처리 */
+    /* animation: scroll-left 15s linear infinite; */
 }
 
-/* 2. 각 키워드 목록 (복사된 두 세트) */
 .keywords {
-    
     display: flex;
     justify-content: center;
     gap: 120px;
-    
-    /* **핵심:** 복사된 키워드 세트가 옆에 붙을 수 있도록 너비를 충분히 확보 */
     flex-shrink: 0; 
     padding: 47px 60px;
-    background: url("../img/그라데이션.jpg");
+    /* background: url("../img/그라데이션.jpg"); <-- 제거: 부모의 배경이 보이도록 함 */
 }
 
-/* 3. 키워드 텍스트 스타일 (이전 요청의 텍스트 선 효과 유지) */
+/* 키워드 텍스트 스타일: 기본 채우기 */
 .keywords span {
-   
-    /* display: inline-block; */
-    /* padding: 0 10px; 단어 간격 조절 */
     font-size: 40px;
     font-weight: 600;
     font-family: 'Pretendard', sans-serif;
-    
-    /* 이미지와 유사한 폰트 색상 및 선 효과 */
-    /* color: transparent; */
-    -webkit-text-stroke: 1px #29489F; /* 테두리 선 색상 */
+    color: #29489F; /* 채우기 색상 */
+    -webkit-text-stroke: 0; /* 선 제거 */
 }
 
- .stroke-text{
-    
-    color: transparent; 
-    -webkit-text-stroke: 1.5px #29489F; 
-    font-size: 48px;
-    font-weight: 700;
- }
-
-/* 4. 애니메이션 정의: 왼쪽으로 이동 */
-
-@keyframes scroll-left {
-    from {
-        transform: translateX(0%); /* 시작 위치 */
-    }
-    to {
-        transform: translateX(-50%); /* 트랙의 절반 길이만큼 이동 (복사본 하나만큼 이동) */
-    }
+/* 키워드 텍스트 스타일: 선만 있는 텍스트 */
+.stroke-text{
+    color: transparent; /* 내부 색상 투명 */
+    -webkit-text-stroke: 1.5px #29489F; /* 선 효과 */
+    font-size: 40px; /* span과 동일하게 통일 */
+    font-weight: 600; /* span과 동일하게 통일 */
 }
+
+/* @keyframes scroll-left {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+} */
+
+
+/* ============================================== */
+/* 5. About Me 섹션 (유동적 너비 & 중앙 정렬) */
+/* ============================================== */
+
 .aboutme-title{
-    border: 1px solid red;
     margin-top: 200px;
-    margin-bottom: 100px;
-    
+    margin-bottom: 80px;
 }
 .aboutme-title h1{
     font-size: 40px;
     font-weight: 400;
 }
-/* .aboutme-title p{
-    font-family: 'Pretendard';
-    color: black;
-} */
+
 .aboutme{
     display: flex; 
     gap:100px;
+    margin-top: -40px;
+    justify-content: center; /* 중앙 정렬 추가 */
+    width: 100%; /* 메인 너비에 맞게 */
 }
 .aboutme-text{
-    border: 1px solid red;
     text-align: left;
-    width: 612px;
-    margin-left: 120px;
-    padding: 100px;
+    max-width: 612px; /* **반응형 핵심:** 최대 너비 제한 */
+    width: 90%; /* 유동적인 너비 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 50px; /* 패딩 축소 */
     
 }
-.aboutme-text h3{
-    font-size: 28px;
-    font-weight: 300;
+.aboutme-text h3 {
+    font-size: 23px;
+    font-weight: 600;
+    display: table;
+    position: relative;
 }
-.aboutme-text p{
+.aboutme-text h3:after {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 10px;
+    content: "";
+    background: #d7dce9b2;
+    z-index: -1;
+}
+.aboutme-text p {
     font-family: 'Pretendard';
     color: black;
     font-size: 20px;
     font-weight: 200;
-    
+    line-height: 1.5;
+    margin-bottom: 2.4rem;
 }
-.aboutme-img{
-    margin-right: 120px;
-    border: 1px solid red;
+.aboutme-img {
+    margin-top: 60px;
+}
+.aboutme-img img {
+    max-width: 100%; /* 이미지 크기 유동성 확보 */
+    height: auto;
 }
 
-/* .footer {
-  width: 1600px;
-  height: 140px;
-  align-items: center;
-  
-  bottom: 0;
-  left: 0;
-  border-top: 1px solid  #29489F;
-  border-bottom: 1px solid  #29489F;
-  background: url("../img/그라데이션.jpg");
-} */
 
-/* .keywords {
-  display: flex;
-  justify-content: center;
-  gap: 130px;
-  padding: 45px 0;
-} */
- /* .stroke-text{
+/* ============================================== */
+/* 6. 1024px 미디어 쿼리 (반응형 코드) */
+/* ============================================== */
+
+@media (max-width: 1024px) {
     
-    color: transparent; 
-    -webkit-text-stroke: 1.5px #29489F; 
-    font-size: 48px;
-    font-weight: 700;
- }
-.keywords span {
-  font-size: 40px;
-  font-weight: 600;
-  font-family: 'Pretendard', sans-serif;
-} */
+    /* 메인 콘텐츠 */
+    .main {
+        padding-top: 150px;
+        width: 85%;
+    }
+    .main-title {
+        font-size: 50px; /* 폰트 크기 축소 */
+    }
+    .main-title .imgg{
+        width: 135px;
+        height: 64px;
+    }
+   .img .line{
+        width: 50px;
+        margin-bottom: 20px;
+    }
+    /* 아이콘 마진 조정 */
+    .icon-left { margin-left: 20px; }
+    .icon-right { margin-right: 20px; }
+    
+    /* 세로 텍스트 숨김 */
+    .vertical-text {
+        display: none; 
+    }
+    
+    /* 푸터 */
+    .footer-keywords {
+        height: 90px;
+    }
+    .keywords {
+        gap: 60px;
+        padding: 30px 40px;
+    }
+    .keywords span, .stroke-text {
+        font-size: 28px;
+    }
+
+    /* About Me 섹션 */
+    .aboutme {
+        flex-direction: column; /* 세로로 쌓기 */
+        gap: 50px;
+        margin-top: 0;
+    }
+    .aboutme-title h1 {
+        font-size: 30px;
+        margin-top: 100px;
+    }
+    .aboutme-text {
+        width: 90%;
+        max-width: none;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .aboutme-text h3 {
+        font-size: 20px;
+        display: inline-block;
+    }
+    .aboutme-text p {
+        font-size: 16px;
+    }
+    .aboutme-img {
+        margin-top: 20px;
+    }
+    .aboutme-img img {
+        max-width: 80%;
+    }
+}
