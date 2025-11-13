@@ -207,7 +207,6 @@ body {
 
 .aboutme{
     display: flex; 
-    gap:100px;
     margin-top: -40px;
     justify-content: center; /* 중앙 정렬 추가 */
     width: 100%; /* 메인 너비에 맞게 */
@@ -245,13 +244,46 @@ body {
     margin-bottom: 2.4rem;
 }
 .aboutme-img {
-    margin-top: 60px;
+    margin-top: -20px;
+    margin-right: 58px;
 }
 .aboutme-img img {
     max-width: 100%; /* 이미지 크기 유동성 확보 */
     height: auto;
 }
+.aboutme2{
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    gap: 180px;
+    font-family: 'Pretendard';
+}
 
+.aboutme2-img{
+    width: 550px;
+    height: 474px;
+}
+.aboutme2-txt{
+    padding-top: 130px;
+}
+.aboutme2-txt .txt-1{
+    font-size: 28px;
+    font-family: 'Pretendard';
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+.aboutme2-txt .txt-2{
+    font-family: 'Pretendard';
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 60px;
+    line-height: 32px;
+    font-weight: 200;
+    line-height: 1.5;
+}
+.aboutme2-txt span{
+    color: #000;
+}
 
 /* ============================================== */
 /* 6. 1024px 미디어 쿼리 (반응형 코드) */
@@ -262,7 +294,7 @@ body {
     /* 메인 콘텐츠 */
     .main {
         padding-top: 150px;
-        width: 85%;
+        width: 100%;
     }
     .main-title {
         font-size: 50px; /* 폰트 크기 축소 */
