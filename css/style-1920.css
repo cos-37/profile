@@ -102,6 +102,9 @@ body {
 .flower{
     margin-right: 30px;
 }
+.imgg{
+    margin-right: 25px;
+}
 
 .subtitle {
     font-size: 15px;
@@ -200,9 +203,9 @@ body {
     margin-top: 200px;
     margin-bottom: 80px;
 }
-.aboutme-title h1{
+.aboutme-title h1 {
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .aboutme{
@@ -244,16 +247,16 @@ body {
     margin-bottom: 2.4rem;
 }
 .aboutme-img {
-    margin-top: -20px;
-    margin-right: 58px;
+    /* margin-top: -20px; */
+    margin-right: 120px;
 }
 .aboutme-img img {
     max-width: 100%; /* 이미지 크기 유동성 확보 */
     height: auto;
 }
-.aboutme2{
+.aboutme2 {
     display: flex;
-    margin-top: 200px;
+    margin-top: 170px;
     justify-content: center;
     gap: 180px;
     font-family: 'Pretendard';
@@ -271,6 +274,10 @@ body {
     font-family: 'Pretendard';
     font-weight: 600;
     margin-bottom: 60px;
+    color: #405181;
+}
+.all-txt{
+    display: flex;
 }
 .aboutme2-txt .txt-2{
     font-family: 'Pretendard';
@@ -284,6 +291,179 @@ body {
 .aboutme2-txt span{
     color: #000;
 }
+.txt-end{
+    color: #405181;
+    margin-left: 65px;
+}
+.txt-end2{
+    margin-left: 40px;
+    color: #405181;
+}
+.design-values {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    margin-top: 170px;
+    padding: 0px 213px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 140px;
+}
+
+.values1 {
+    flex: 0 0 auto;
+    width: 40%;
+}
+
+.values1 h1 {
+    font-family: 'varesha';
+    font-size: 110px;
+    font-weight: 100;
+    line-height: 1.1;
+    color: #29489F;
+    /* margin: 0; */
+    margin-bottom: 15px;
+    /* letter-spacing: 6px; */
+    text-align: left;
+}
+
+.values1 p {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #29489F;
+    margin: 0;
+}
+
+.values2 {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    width: 60%;
+}
+
+.value-item {
+    padding: 30px 0;
+    position: relative;
+}
+
+/* 첫 번째 행은 위쪽 구분선 없음 */
+.value-item:first-child,
+.value-item:nth-child(2) {
+    border-top: none;
+}
+
+
+
+.value-item:nth-child(odd) {
+    padding-right: 40px;
+}
+
+.value-item:nth-child(even) {
+    padding-left: 40px;
+}
+
+.value-item h4 {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #29489F;
+    margin: 0 0 15px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid rgba(41, 72, 159, 0.2);
+    border-bottom: 1px solid rgba(41, 72, 159, 0.2);
+}
+.design-values .values1-p{
+    
+    text-align: left;
+}
+.value-item p {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #29489F;
+    margin: 0;
+    color: #000;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skill{
+    margin-top: 170px;
+    padding: 140px;
+    text-align: center;
+}
+.skill h3{
+    margin-bottom: 20px;
+        font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.skill p {
+    font-family: 'Pretendard';
+    line-height: 22px;
+}
+
+.skill h4{
+    font-family: 'Pretendard';
+}
+.grid-skill {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(40px,1fr));
+    gap: 40px;
+    text-align: left;
+    margin-top: 70px;
+}
+.grid-skill>li {
+    border: 1px solid #606C8E;
+    padding: 28px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.grid-skill>li h4{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.grid-skill>li p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+}
+.skill .fill-color{
+    background-color: #606C8E;
+    color: #fff;
+}
+
 
 /* ============================================== */
 /* 6. 1024px 미디어 쿼리 (반응형 코드) */

@@ -1,0 +1,6 @@
+.grid-skill{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(40px,1fr));
+    gap: 10px;
+    text-align: left;
+}
