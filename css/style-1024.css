@@ -1,6 +1,15 @@
-.grid-skill{
-    display: grid;
-    grid-template-columns: repeat(2,minmax(40px,1fr));
-    gap: 10px;
-    text-align: left;
-}
+@media (max-width:1024px){
+    html{
+        font-size:16px;
+    }
+    /* .header{
+        padding: 20px;
+    } */
+    .main{
+            padding-top: 180px;
+            width: 830px;
+        }
+        .main-title{
+            font-size: 20px;
+        }
+    }

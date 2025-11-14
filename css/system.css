@@ -1,170 +1,69 @@
-@media (min-width:1920px){
-    body{
-        max-width: 1920px;
-        margin: 0 auto;
-    }
-}
 :root{
-    /* basic size 1rem */
-    --basic-font-pc:20px;
-    --basic-font-tab:18px;
-    --basic-font-mobile:14px;
-
-    /* color variation */
-    --warm-linen:#F9F9F4;
-    --Navy-haze-main:#29489F;
-
-    /* font-weight */
-    --font-strong:700;
-    --font-normal:400;
-
-    /* line-heigt */
-    --base-line-height:1.2;
-    --text-line-height:1.4;
-
-    /* spacing */
-    --space-normal:1rem;
-    --space-x-small:0.5rem;
-    --space-2x-small:0.25rem;
-    --space-x-large:2rem;
-    --space-2x-large:3rem;
-    --space-3x-large:6rem;
-
-    /* semantic color */
-    --color-inacitive:#999999;
-
-    /* divice width */
-    --device-tab : 1440px;
-    --device-mobile : 786px;
-
-
+    --main-color:rgba(192, 192, 169,1);
+    --heading1:1.6rem;
+    --heading2:1.4rem;
+    --heading3:1.25rem;
+    --heading4:1rem;
+    --body:1rem;
+    --body2:0.9rem;
+    --weight1:700;
+    --weight2:400;
+    --lnh120:1.2;
+    --lnh150:1.5;
 }
-html{
-    font-size: var(--basic-font-pc);
-    font-family: 'Pretendard';
-    line-height: var(--base-line-height);
-    scroll-behavior: smooth;
-}
-em{
-    font-style: inherit;
-    color: var(--bloody-Beige-700);
-}
-h1{
-    font-size: 1.6rem;
-    font-weight: var(--font-strong);
-}
-h2{
-    font-size: 1.4rem;
-    font-weight: var(--font-strong);
-}
-h3{
-    font-size: 1.25rem;
-    font-weight: var(--font-strong);
-}
-h4{
-    font-size: 1rem;
-    font-weight: var(--font-strong);
+@media (min-width:2000px){
+    .common-frame{
+        width:1920px;
+        margin:0 auto;
+    }
 }
 p{
-    font-size: 1rem;
-    line-height: var(--text-line-height);
+    line-height: var(--lnh150);
 }
-.b2{
-    font-size: 0.9rem;
-}
-.detail{
-    font-size: 0.8rem;
-}
-.pf{
+.abore{
     font-family: "Aboreto", system-ui;
+    font-weight: var(--weight2);
+}
+h1{
+    font-size: var(--heading1);
+    font-weight:var(--weight1);
+}
+h2{
+    font-size: var(--heading2);
+    font-weight:var(--weight1);
+}
+h3{
+    font-size: var(--heading3);
+    font-weight:var(--weight1);
+}
+h4{
+    font-size: var(--heading4);
+    font-weight:var(--weight1);
+}
+
+html{
+    font-size:20px;
+    font-family: 'Pretendard',sans-serif;
 }
 .common-frame{
-    width: 1440px;
-    margin: 0 auto;
+    width:auto;
+    margin:0 3rem;
 }
-.logo img{
-    height: 5rem;
-}
-.btn-all-menu img{
-    height: 1.2rem;
-}
-.slider-container {
-  overflow-x: auto;
-  overflow-y: hidden;
-    /* 슬라이드처럼 멈춤*/
-  /* scroll-snap-type: x mandatory; */
-  -webkit-overflow-scrolling: touch; /*ios부드러운스크롤*/
-  white-space: nowrap;
-  display: flex;
-}
-
-.slider-track {
-  display: flex;
-}
-/* 웹킷 계열의 브라우저 -> 크롬 엣지 사파리 */
-::-webkit-scrollbar{
-    width: 0.25rem;
-    height: 0.25rem;
-}
-::-webkit-scrollbar-track{
-    background: var(--bloody-Beige-0);
-    /* border-radius: 10px; */
-}
-::-webkit-scrollbar-thumb{
-    background: var(--bloody-Beige-500);
-    border-radius: 10px;
-}
-
-.ln1{
-    display: -webkit-box;          /*플렉스형 박스(옛 사양)*/
-    -webkit-box-orient: vertical;  /* 세로 방향 줄바꿈 기준 */
-    -webkit-line-clamp: 1;         /* 보여줄 최대 줄 수 */
-    overflow: hidden;              /* 넘치는 내용 숨기기 */
-    text-overflow: ellipsis;       /* 말줄임 표기(보조)*/
-}
-
-.ln2{
-    display: -webkit-box;          /*플렉스형 박스(옛 사양)*/
-    -webkit-box-orient: vertical;  /* 세로 방향 줄바꿈 기준 */
-    -webkit-line-clamp: 2;         /* 보여줄 최대 줄 수 */
-    overflow: hidden;              /* 넘치는 내용 숨기기 */
-    text-overflow: ellipsis;       /* 말줄임 표기(보조)*/
-}
-
-.ln3{
-    display: -webkit-box;          /*플렉스형 박스(옛 사양)*/
-    -webkit-box-orient: vertical;  /* 세로 방향 줄바꿈 기준 */
-    -webkit-line-clamp: 3;         /* 보여줄 최대 줄 수 */
-    overflow: hidden;              /* 넘치는 내용 숨기기 */
-    text-overflow: ellipsis;       /* 말줄임 표기(보조)*/
-}
-
-@media (max-width:1440px){
-    html{font-size: var(--basic-font-tab);
+@media (max-width:1024px){
+    html{
+        font-size:18px;
     }
     .common-frame{
-        width: auto;
-        margin: 0 2rem;
+        width:auto;
+        margin:0 2rem;
     }
-        main{
-        margin-top: 94px;
-    }
-      header.fold~main{
-    margin-top: 94px;
-    }
-
 }
 @media (max-width:768px){
-    html{font-size: var(--basic-font-mobile);
+    html{
+        font-size:14px;
     }
     .common-frame{
-        width: auto;
-        margin: 0 1rem;
-    }
-      main{
-        margin-top: 74px;
-    }
-    header.fold~main{
-        margin-top: 74px;
+        width:auto;
+        margin:0 1rem;
     }
 }
