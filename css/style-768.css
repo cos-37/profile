@@ -1,0 +1,129 @@
+@media (max-width:768px){
+    html{
+        font-size:12px;
+    }
+    .main {
+        /* flex-grow: 1; */
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        width: 90%;
+        margin: 0 1rem;
+        /* max-width: 1600px; */
+        text-align: center;
+        padding-top: 190px;
+        /* min-height: 650px; */
+        border-left: 1px solid #29489F;
+        border-right: 1px solid #29489F;
+    }
+    .vertical-text {
+        position: fixed;
+        left: 0px;
+        top: 0;
+        width: 5%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-title {
+        font-size: 4rem;
+        font-weight: 100;
+        line-height: 1.2;
+        margin: 2.5rem 0 2rem;
+    }
+    .main-title .imgg{
+        height:4rem;
+    }
+    .aboutme {
+        display: flex;
+        margin-top: 1rem;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .aboutme-img {
+    margin-top: 0px;
+    margin-left: 4rem;
+    text-align: center;
+    width: 75%;
+}
+   
+
+   .aboutme2 {
+    display: flex;
+    margin-top: 3.5rem;
+    justify-content: center;
+    gap: 3rem;
+    font-family: 'Pretendard';
+    flex-direction: column;
+}
+    .aboutme2-txt {
+    padding-top: 2.5rem;
+}
+    .all-txt {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .txt-end {
+        color: #405181;
+        margin-left: 0rem;
+    }
+    .aboutme2-img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .design-values {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: flex-start; */
+        margin-top: 8.5rem;
+        padding: 2rem;
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 2rem;
+        flex-direction: column;
+    }
+    .values2 {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        width: 75%;
+        margin-left: auto;
+    }
+
+.value-item:nth-child(odd) {
+    padding-right: 0.5rem;
+}
+
+.value-item:nth-child(even) {
+    padding-left: 0.5rem;
+}
+.values1 {
+    flex: 0 0 auto;
+    width: 80%;
+}
+.grid-skill {
+    display: grid;
+    grid-template-columns: repeat(1,minmax(40px,1fr));
+    gap: 2rem;
+    text-align: left;
+    margin-top: 3.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+}

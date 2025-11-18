@@ -5,6 +5,7 @@
 html {
     font-family: 'varesha';
     height: 100%; /* 스크롤 고정 핵심 */
+    font-size: 20px;
 }
 
 body {
@@ -35,7 +36,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0px;
+    padding: 1.25rem 0px;
     border-bottom: 1px solid #29489F;
     position: fixed;
     left: 0;
@@ -48,7 +49,7 @@ body {
 .icon-left{
     width: 50px;
     height: 50px;
-    margin-left: 50px;
+    margin-left: 2.75rem;
 }
 .center-di{
     width: 20px;
@@ -57,24 +58,33 @@ body {
 .icon-right {
     width: 40px;
     height: 40px;
-    margin-right: 55px;
+    margin-right: 2.75rem;
     line-height: 1.5;
 }
 
 .logo {
-    font-size: 18px;
+    font-size: 0.9rem;
     letter-spacing: 2px;
 }
 
 /* 세로 텍스트 */
-.vertical-text {
+.vertical-text{
     position: fixed; /* 고정 */
-    left: 10px;
-    top: 50%;
-    transform: rotate(-90deg) translateY(-50%);
+    left: 0px;
+    top: 0;
+    width:7.5%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-text span {
+    transform: rotate(-90deg);
     letter-spacing: 1px;
     color: #29489F;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 /* ============================================== */
@@ -82,17 +92,16 @@ body {
 /* ============================================== */
 
 .main {
-    flex-grow: 1; /* 스크롤 고정 핵심: 남은 공간 차지 */
-    overflow-y: auto; /* 스크롤 고정 핵심: 이 영역만 스크롤 가능 */
-    -ms-overflow-style: none; /* 스크롤바 숨김 (IE) */
-    scrollbar-width: none; /* 스크롤바 숨김 (Firefox) */
-    
-    width: 85%; /* **반응형 핵심:** 유동적인 너비 */
-    max-width: 1600px; /* **반응형 핵심:** 최대 너비 제한 */
-    
+    /* flex-grow: 1; */
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 85%;
+    margin: 0 1rem;
+    /* max-width: 1600px; */
     text-align: center;
-    padding-top: 190px;
-    min-height: 650px;
+    padding-top: 9.5rem;
+    /* min-height: 650px; */
     border-left: 1px solid #29489F;
     border-right: 1px solid #29489F;
 }
@@ -101,18 +110,18 @@ body {
 }
 
 .flower{
-    margin-right: 30px;
+    margin-right: 1.5rem;
 }
 .imgg{
-    margin-right: 25px;
+    margin-right: 1.25rem;
 }
 
 .subtitle {
-    font-size: 15px;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     font-family: 'Pretendard';
     font-weight: 300;
-    margin-top: -50px;
+    margin-top: -2.5rem;
 }
 
 .subtitle span {
@@ -121,14 +130,14 @@ body {
 }
 
 .main-title {
-    font-size: 100px;
+    font-size: 5rem;
     font-weight: 100;
     line-height: 1.2;
-    margin: 50px 0 40px;
+    margin: 2.5rem 0 2rem;
 }
 
 .desc {
-    font-size: 20px;
+    font-size: 1rem;
     color: #29489F;
     font-weight: 300;
     font-family: 'Pretendard';
@@ -137,7 +146,7 @@ body {
 .contant img{
     max-width: 100%; /* 이미지 크기 유동성 확보 */
     height: auto;
-    margin-top: 55px;
+    margin-top: 2.75rem;
 }
 
 /* ============================================== */
@@ -154,7 +163,7 @@ body {
     border-bottom: 1px solid #29489F;
     background: url("../img/gradient.jpg"); /* 한글 파일명 변경 권장 */
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 2.5rem;
 }
 
 .keywords-track {
@@ -169,13 +178,13 @@ body {
     justify-content: center;
     gap: 120px;
     flex-shrink: 0; 
-    padding: 47px 60px;
+    padding: 2.35rem 3rem;
     /* background: url("../img/그라데이션.jpg"); <-- 제거: 부모의 배경이 보이도록 함 */
 }
 
 /* 키워드 텍스트 스타일: 기본 채우기 */
 .keywords span {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 600;
     font-family: 'Pretendard', sans-serif;
     color: #29489F; /* 채우기 색상 */
@@ -186,7 +195,7 @@ body {
 .stroke-text{
     color: transparent; /* 내부 색상 투명 */
     -webkit-text-stroke: 1.5px #29489F; /* 선 효과 */
-    font-size: 40px; /* span과 동일하게 통일 */
+    font-size: 2rem; /* span과 동일하게 통일 */
     font-weight: 600; /* span과 동일하게 통일 */
 }
 
@@ -201,30 +210,30 @@ body {
 /* ============================================== */
 
 .aboutme-title{
-    margin-top: 200px;
-    margin-bottom: 80px;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
 }
 .aboutme-title h1 {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 600;
 }
 
-.aboutme{
-    display: flex; 
-    margin-top: -40px;
-    justify-content: center; /* 중앙 정렬 추가 */
-    width: 100%; /* 메인 너비에 맞게 */
+.aboutme {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    width: 100%;
 }
 .aboutme-text{
     text-align: left;
     max-width: 612px; /* **반응형 핵심:** 최대 너비 제한 */
     width: 90%; /* 유동적인 너비 */
     margin: 0 auto; /* 중앙 정렬 */
-    padding: 50px; /* 패딩 축소 */
+    padding: 2.5rem; /* 패딩 축소 */
     
 }
 .aboutme-text h3 {
-    font-size: 23px;
+    font-size: 1.15rem;
     font-weight: 600;
     display: table;
     position: relative;
@@ -242,14 +251,14 @@ body {
 .aboutme-text p {
     font-family: 'Pretendard';
     color: black;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 200;
     line-height: 1.5;
     margin-bottom: 2.4rem;
 }
 .aboutme-img {
     /* margin-top: -20px; */
-    margin-right: 120px;
+    margin-right: 6rem;
 }
 .aboutme-img img {
     max-width: 100%; /* 이미지 크기 유동성 확보 */
@@ -257,24 +266,23 @@ body {
 }
 .aboutme2 {
     display: flex;
-    margin-top: 170px;
+    margin-top: 8.5rem;
     justify-content: center;
-    gap: 180px;
+    gap: 3rem;
     font-family: 'Pretendard';
 }
-
 .aboutme2-img{
     width: 550px;
     height: 474px;
 }
 .aboutme2-txt{
-    padding-top: 130px;
+    padding-top: 6.5rem;
 }
 .aboutme2-txt .txt-1{
-    font-size: 28px;
+    font-size: 1.4rem;
     font-family: 'Pretendard';
     font-weight: 600;
-    margin-bottom: 60px;
+    margin-bottom: 3rem;
     color: #405181;
 }
 .all-txt{
@@ -282,9 +290,9 @@ body {
 }
 .aboutme2-txt .txt-2{
     font-family: 'Pretendard';
-    font-size: 20px;
+    font-size: 1rem;
     color: #000;
-    margin-bottom: 60px;
+    margin-bottom: 3rem;
     line-height: 32px;
     font-weight: 200;
     line-height: 1.5;
@@ -294,22 +302,22 @@ body {
 }
 .txt-end{
     color: #405181;
-    margin-left: 65px;
+    margin-left: 3.25rem;
 }
 .txt-end2{
-    margin-left: 40px;
+    margin-left: 2rem;
     color: #405181;
 }
 .design-values {
     display: flex;
     justify-content: space-between;
     /* align-items: flex-start; */
-    margin-top: 170px;
-    padding: 0px 213px;
+    margin-top: 8.5rem;
+    padding: 0px 10.65rem;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    gap: 140px;
+    gap: 7rem;
 }
 
 .values1 {
@@ -319,21 +327,21 @@ body {
 
 .values1 h1 {
     font-family: 'varesha';
-    font-size: 110px;
+    font-size: 5.5rem;
     font-weight: 100;
     line-height: 1.1;
     color: #29489F;
     /* margin: 0; */
-    margin-bottom: 15px;
+    margin-bottom: 0.75rem;
     /* letter-spacing: 6px; */
     text-align: left;
 }
 
 .values1 p {
     font-family: 'Pretendard', sans-serif;
-    font-size: 16px;
+    font-size: 0.8rem;
     line-height: 1.8;
-    color: #29489F;
+    color: #000;
     margin: 0;
 }
 
@@ -346,7 +354,7 @@ body {
 }
 
 .value-item {
-    padding: 30px 0;
+    padding: 1.5rem 0;
     position: relative;
 }
 
@@ -359,21 +367,21 @@ body {
 
 
 .value-item:nth-child(odd) {
-    padding-right: 40px;
+    padding-right: 2rem;
 }
 
 .value-item:nth-child(even) {
-    padding-left: 40px;
+    padding-left: 2rem;
 }
 
 .value-item h4 {
     font-family: 'Pretendard', sans-serif;
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #29489F;
-    margin: 0 0 15px 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin: 0 0 0.75rem 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     border-top: 1px solid rgba(41, 72, 159, 0.2);
     border-bottom: 1px solid rgba(41, 72, 159, 0.2);
 }
@@ -383,7 +391,7 @@ body {
 }
 .value-item p {
     font-family: 'Pretendard', sans-serif;
-    font-size: 15px;
+    font-size: 0.75rem;
     line-height: 1.8;
     color: #29489F;
     margin: 0;
@@ -393,45 +401,24 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .skill{
-    margin-top: 170px;
-    padding: 140px;
+    margin-top: 8.5rem;
+    padding: 7rem;
     text-align: center;
 }
 .skill h3{
-    margin-bottom: 20px;
-        font-size: 40px;
+    margin-bottom: 1rem;
+        font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 .skill p {
     font-family: 'Pretendard';
-    line-height: 22px;
+    line-height: 1.5rem;
+}
+.skill-p{
+    color: #000;
+    font-weight: 200;
 }
 
 .skill h4{
@@ -440,23 +427,23 @@ body {
 .grid-skill {
     display: grid;
     grid-template-columns: repeat(3,minmax(40px,1fr));
-    gap: 40px;
+    gap: 2rem;
     text-align: left;
-    margin-top: 70px;
+    margin-top: 3.5rem;
 }
 .grid-skill>li {
     border: 1px solid #606C8E;
-    padding: 28px;
-    font-size: 20px;
+    padding: 1.4rem;
+    font-size: 1rem;
     border-radius: 8px;
 }
 .grid-skill>li h4{
-    margin-bottom: 20px;
-    font-size: 25px;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 .grid-skill>li p {
-    font-size: 16px;
+    font-size: 0.8rem;
     font-weight: 300;
     line-height: 25px;
 }
@@ -468,75 +455,123 @@ body {
     display: flex;
 }
 
-/* ============================================== */
-/* 6. 1024px 미디어 쿼리 (반응형 코드) */
-/* ============================================== */
+.popup {
+    margin-top: 10rem;
+}
 
-/* @media (max-width: 1024px) {
-    
-   
-    .main {
-        padding-top: 150px;
-        width: 100%;
-    }
-    .main-title {
-        font-size: 50px;  폰트 크기 축소 
-    }
-    .main-title .imgg{
-        width: 135px;
-        height: 64px;
-    }
-   .img .line{
-        width: 20px;
-    }
-     아이콘 마진 조정 
-    .icon-left { margin-left: 20px; }
-    .icon-right { margin-right: 20px; }
-    
-     세로 텍스트 숨김 
-    .vertical-text {
-        display: none; 
-    }
-    
-     푸터 
-    .footer-keywords {
-        height: 90px;
-    }
-    .keywords {
-        gap: 60px;
-        padding: 30px 40px;
-    }
-    .keywords span, .stroke-text {
-        font-size: 28px;
-    }
+/* 제목 + 좌우 버튼 영역 */
+.popup-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
 
-     About Me 섹션 
-    .aboutme {
-        flex-direction: column;  세로로 쌓기 
-        gap: 50px;
-        margin-top: 0;
-    }
-    .aboutme-title h1 {
-        font-size: 30px;
-        margin-top: 100px;
-    }
-    .aboutme-text {
-        width: 90%;
-        max-width: none;
-        padding: 0 20px;
-        text-align: center;
-    }
-    .aboutme-text h3 {
-        font-size: 20px;
-        display: inline-block;
-    }
-    .aboutme-text p {
-        font-size: 16px;
-    }
-    .aboutme-img {
-        margin-top: 20px;
-    }
-    .aboutme-img img {
-        max-width: 80%;
-    }
-} */
+.popup-top h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* 버튼 공통 */
+.popup-prev,
+.popup-next {
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.popup-prev:hover,
+.popup-next:hover {
+    opacity: 1;
+}
+
+/* Swiper 버튼 기본 화살표 유지 */
+.swiper-button-prev,
+.swiper-button-next {
+    position: static; 
+    margin: 0; 
+}
+
+/* slider */
+.popup-slider {
+    /* width: 120%; */
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    /* max-width: 80%;
+    margin: 0 8rem; */
+}
+
+.popup-slider h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.popup h3 + p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.banner{
+    margin-top: 10rem;
+}
+/* 🔥 배너 좌우 버튼 */
+.banner-slider{
+    width:90%;
+}
+.banner-prev,
+.banner-next {
+    color: #444; /* 화살표 색 */
+    width: 40px;
+    height: 40px;
+}
+
+.banner-prev {
+    left: 20px;
+}
+
+.banner-next {
+    right: 20px;
+}
+
+/* swiper 기본 스타일 강제 리셋 — 배치 깨짐 방지 */
+.swiper-button-prev {
+
+    top: 50%;
+    transform: translateY(-50%);
+    /* margin-left: 10rem; */
+}
+.swiper-button-next{
+    /* margin-right: 10rem; */
+}
+
+.banner-slider .swiper-button-next{
+    left: auto;
+    right: 2rem!important;
+}
+.banner-slider .swiper-button-prev{
+    right: auto;
+    left: 2rem!important;
+}
+
+.banner h3{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.banner h3+p {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.banner-txt{
+    margin-top: 1rem;
+    display: flex;
+    gap:1rem;
+}
+.banner-txt>*{
+    flex:1;
+}
