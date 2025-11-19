@@ -46,9 +46,9 @@ body {
     box-sizing: border-box;
 }
 
-.icon-left{
-    width: 50px;
-    height: 50px;
+.icon-left {
+    width: 2.5rem;
+    height: 2.5rem;
     margin-left: 2.75rem;
 }
 .center-di{
@@ -56,8 +56,8 @@ body {
     height: 20px;
 }
 .icon-right {
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     margin-right: 2.75rem;
     line-height: 1.5;
 }
@@ -158,7 +158,6 @@ body {
     height: 140px;
     
     width: 100%; /* **반응형 핵심:** 유동적인 너비 */
-    max-width: 1600px; /* **반응형 핵심:** 최대 너비 제한 */
     
     border-bottom: 1px solid #29489F;
     background: url("../img/gradient.jpg"); /* 한글 파일명 변경 권장 */
@@ -498,7 +497,7 @@ body {
 
 /* slider */
 .popup-slider {
-    /* width: 120%; */
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -510,6 +509,9 @@ body {
 .popup-slider h4 {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
+}
+.popup-slider p{
+    color:#000;
 }
 
 .popup h3 + p {
@@ -574,4 +576,28 @@ body {
 }
 .banner-txt>*{
     flex:1;
+}
+
+
+@keyframes traina {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }    
+}
+@keyframes trainb {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }    
+}
+.traina{
+    animation:traina 20s linear -10s infinite;
+}
+.trainb{
+    animation:trainb 20s linear 0s infinite;
 }

@@ -44,12 +44,32 @@
         flex-direction: column-reverse;
     }
     .aboutme-img {
-    margin-top: 0px;
-    margin-left: 4rem;
-    text-align: center;
-    width: 75%;
+        margin-top: 0px;
+        margin-left: 0;
+        text-align: center;
+        width: auto;
+        text-align: center;
+        margin-right: 0;
+    }
+   .aboutme-text h3:after {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 6px;
+    content: "";
+    background: #d7dce9b2;
+    z-index: -1;
 }
-   
+.value-item p {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #29489F;
+    margin: 0;
+    color: #000;
+    font-weight: 300;
+}
 
    .aboutme2 {
     display: flex;
@@ -59,14 +79,24 @@
     font-family: 'Pretendard';
     flex-direction: column;
 }
-    .aboutme2-txt {
-    padding-top: 2.5rem;
+.aboutme2-txt {
+    padding: 2.5rem 0.5rem;
 }
-    .all-txt {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
+.aboutme2-txt .txt-2 br{display: none;}
+.all-txt {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.values1 p {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000;
+    margin: 0;
+}
     .txt-end {
         color: #405181;
         margin-left: 0rem;
@@ -88,15 +118,36 @@
         gap: 2rem;
         flex-direction: column;
     }
-    .values2 {
-        flex: 1;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0;
-        width: 75%;
-        margin-left: auto;
-    }
-
+    .skill {
+    margin-top: 8.5rem;
+    padding: 7rem 0.5rem;
+    text-align: center;
+}
+.banner-txt {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.values2 {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    width: 100%;
+    margin-left: 0;
+}
+.values1 h1 {
+    font-family: 'varesha';
+    font-size: 4.5rem;
+    font-weight: 100;
+    line-height: 1.1;
+    color: #29489F;
+    /* margin: 0; */
+    margin-bottom: 0.75rem;
+    /* letter-spacing: 6px; */
+    text-align: left;
+}
 .value-item:nth-child(odd) {
     padding-right: 0.5rem;
 }

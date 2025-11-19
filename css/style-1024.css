@@ -26,11 +26,11 @@
     max-width: 612px;
     width: 90%;
     margin: 0 auto;
-    padding: 2.5rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
 }
-
 .aboutme2-img {
-    max-width: 40%;
+    /* max-width: 40%; */
     
 }
 .aboutme2-txt {
