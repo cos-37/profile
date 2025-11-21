@@ -18,6 +18,7 @@
      <script src="./js/bbyong.js"></script>
      <link rel="stylesheet" href="./css/interaction.css">
      <script src="./js/observer.js"></script>
+     <script src="./js/header.js"></script>
 
      <!-- swiper js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
@@ -26,6 +27,25 @@
 </head>
 
 <body>
+
+
+    <div class="header-smart fadeout">
+        <ul class="gnb-smart">
+            <li><a href="#hero">home</a></li>
+            <li><a href="#aboutme">about me</a></li>
+            <li><a href="#skill">skill</a></li>
+            <li><a href="#popup">popups</a></li>
+            <li><a href="#banner">banners</a></li>
+            <li><a href="#project">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="./img/resume.jpg" target="_blank">resume</a></li>
+        </ul>
+    </div>
+
+
+
+
+
     <div class="container">
     <!-- 상단 네비게이션 -->
     <header class="header">
@@ -44,7 +64,7 @@
     <!-- 메인 콘텐츠 -->
     <main class="main">
 
-      <p class="subtitle bbyong">WEB DESIGNER <span>박채은</span></p>
+      <p class="subtitle bbyong" id="hero">WEB DESIGNER <span>박채은</span></p>
 
       <h2 class="main-title">
         DESIGN  <img class="line" src="./img/line.jpg" alt="선"> <img class="imgg" src="./img/design.jpg" alt="구름사진"><br/>
@@ -81,7 +101,7 @@
     
     <!--about me-->
     
-        <div class="aboutme-title"><h1>About Me</h1></div>      
+        <div class="aboutme-title" id="aboutme"><h1>About Me</h1></div>      
           <div class="aboutme">
             <div class="aboutme-text">
                 <h3 class="ltr">Basic is the Key</h3><br>
@@ -118,7 +138,7 @@
       <div class="design-values">
         <div class="values1 ">
           <h1>MY <br> DESIGN <br> VALUES</h1>
-          <p class="values1-p">감각적인 표현과 실질적인 기능의 균형을<br>추구하여 완성도 높은 결과를 위해 끝까지 고민하고 책임집니다.</p>
+          <p class="values1-p">감각적인 표현과 실질적인 기능의 균형을 추구하여 완성도 높은 결과를 위해 끝까지 고민하고 책임집니다.</p>
         </div>
         <div class="values2 ltr">
           <div class="value-item">
@@ -140,7 +160,7 @@
         </div>
       </div>
 
-      <div class="skill">
+      <div class="skill" id="skill">
         <h3>SkILLS & LANGUAGES</h3>
         <p class="skill-p">완성도 높은 결과물을 위해 꾸준히 배우고 성장하고 있습니다. <br>
         디자인의 시작부터 구현까지 이해하려 노력하며,작은 요소 하나에도 의미를 담고자 합니다.</p>
@@ -177,43 +197,117 @@
         </ul>
       </div>
 
+      <section class="popup-showcase" id="popup">
+  <div class="container popup-slider">
+    <header class="section-head">
+      <h2>POPUPS</h2>
+      <p class="lead">디자인을 벤치마킹한 후 각 무드에 어울리도록<br>
+                테마에 맞춰서 500x500픽셀의 팝업디자인을 제작했습니다.</p>
+    </header>
 
-       <div class="popup">
+    <div class="grid">
+      <article class="card">
+        <div class="thumb">
+          <img src="./img/black80.jpg" alt="블랙프라이데이 팝업">
+        </div>
+        <h3 class="card-title">블랙프라이데이 팝업</h3>
+        <p class="card-desc">강렬한 3D 타이포그래피로 할인 메시지를 시각적으로 극대화한 프로모션 팝업입니다.</p>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="./img/chrismats2..png" alt="크리스마스 팝업">
+        </div>
+        <h3 class="card-title">크리스마스 이벤트</h3>
+        <p class="card-desc">따뜻한 레드·그린 컬러와 캐릭터 요소를 활용해 시즌 분위기를 아기자기하게 감성적으로 표현했습니다.</p>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="./img/chrismats1.png" alt="스페셜 이벤트 팝업">
+        </div>
+        <h3 class="card-title">크리스마스 아벤트</h3>
+        <p class="card-desc">따뜻한 레드·그린 컬러와 캐릭터 요소를 활용해 시즌 분위기를 포근하고 감성적으로 표현했습니다.</p>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="./img/summer.jpg" alt="여름휴가 쿠폰 팝업">
+        </div>
+        <h3 class="card-title">여름휴가 할인 쿠폰</h3>
+        <p class="card-desc">일러스트 기반으로 청량한 무드를 강조한 여름 시즌 프로모션 팝업입니다.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<script>
+            const popupSlider = new Swiper(".popup-slider",{
+                slidesPerView: 1,
+                spaceBetween: 14,
+                
+                navigation: {
+                    nextEl: ".popup-next",
+                    prevEl: ".popup-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: {
+                    slidesPerView: 1,
+                    spaceBetween: 18,
+                    },
+                    1024: {
+                    slidesPerView: 1,
+                    spaceBetween: 160,
+                    },
+                },
+                loop:true,
+                autoplay:{
+                  delay:2000
+                },
+                speed:2500
+            })
+        </script>
+
+       <!-- <div class="popup">
                 <h3>Popups</h3>
                 <p>디자인을 벤치마킹한 후 각 무드에 어울리도록<br>
                 테마에 맞춰서 500x500픽셀의 팝업디자인을 제작했습니다.</p>
-                <!-- Slider main container -->
+              
                 <div class="swiper popup-slider">
-                    <!-- Additional required wrapper -->
+                    
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
+                      
                         <div class="swiper-slide">
                             <figure>
                                 <img src="./img/black80.jpg" alt="팝업1 이미지 - 나이키 팝업 할인행사 이미지">
                             </figure>
-                            <h4>가상의 빵집 온블레 배너 - 메뉴 보러가기</h4>
-                            <p>부드러운 베이지/아이보리 배경에 따뜻하고 진한 브라운 계열의 텍스트와 빵 이미지로 클래식하고 포근하며 고급스러운 분위기입니다.</p>
+                            <h4>블랙프라이데이 팝업</h4>
+                            <p>강렬한 3D 타이포그래피로 할인 메시지를 시각적으로 극대화한 프로모션 팝업입니다.</p>
                         </div>
                         <div class="swiper-slide">
                             <figure>
                                 <img src="./img/chrismats2..png" alt="팝업2 이미지 - 나이키 발렌타인 기프트박스 행사 이미지">
                             </figure>
-                            <h4>가상의 빵집 온블레 배너 - 발렌타인 기프트 박스</h4>
-                            <p>전체적으로 나이키의 에너지와 발렌타인 시즌의 설렘을 동시에 담기 위해 강렬한 컬러 포인트와 균형 잡힌 여백을 활용했습니다.</p>
+                            <h4>크리스마스 스페셜 이벤트</h4>
+                            <p>따뜻한 레드·그린 컬러와 캐릭터 요소를 활용해 아기자기하게 시즌 분위기를 감성적으로 표현했습니다.
+                            </p>
                         </div>
                         <div class="swiper-slide">
                             <figure>
                                 <img src="./img/chrismats1.png" alt="팝업3 이미지 - 화이트 데이 행사 이미지">
                             </figure>
-                            <h4>화이트데이 이벤트 팝업</h4>
-                            <p>화이트데이의 달콤한 분위기를 담기 위해 화이트 톤과 파스텔 포인트 컬러를 활용해 부드럽고 산뜻한 무드를 연출했습니다.</p>
+                            <h4>크리스마스 스페셜 이벤트</h4>
+                            <p>따뜻한 레드·그린 컬러와 캐릭터 요소를 활용해 시즌 분위기를 포근하고 감성적으로 표현했습니다.</p>
                         </div>
                         <div class="swiper-slide">
                             <figure>
                                 <img src="./img/summer.jpg" alt="팝업4 이미지 - 블랙프라이데이 이벤트 할인행사 이미지">
                             </figure>
-                            <h4>블랙프라이데이 팝업</h4>
-                            <p>블랙프라이데이의 강렬한 분위기를 살리기 위해 블랙과 핑크 포인트 컬러를 중심으로 강한 대비감을 표현했습니다.</p>
+                            <h4>여름휴가 할인 쿠폰 이벤트</h4>
+                            <p>일러스트 기반으로 청량한 무드를 강조한 여름 시즌 프로모션 팝업입니다.</p>
                         </div>
                     </div>
                 </div>
@@ -237,15 +331,12 @@
                     },
                 },
             })
-        </script>
+        </script> -->
 
-         <div class="banner">
+         <div class="banner" id="banner">
            
                 <h3>Banners</h3>
                 <p>디자인을 벤치마킹한 후 각 무드에 어울리도록<br>
-
-                      
-
                 테마에 맞춰서 1920x700픽셀의 배너디자인을 제작했습니다.</p>
                 
                 <!-- Slider main container -->
@@ -255,11 +346,11 @@
                         <!-- Slides -->
                         <div class="swiper-slide">
                             <figure>
-                                <img src="./img/banner1 (1).jpg" alt="배너1 이미지 - 나이키 팝업 할인행사 이미지">
+                                <img src="./img/banner1 (1).jpg" alt="배너1 이미지 - 온블레 오늘의 빵 배너 이미지">
                             </figure>
                             <div class="banner-txt">
-                                <h4>나이키 배너 - 할인행사 이벤트</h4>
-                                <p>전체적으로 파란색을 메인 톤으로 활용해 나이키 브랜드의 스포티한 이미지를 강조했습니다.</p>
+                                <h4>온블레 - 오늘의 빵</h4>
+                                <p>신선한 빵 실물 이미지를 일렬로 배치하고, 베이지 톤 배경과반복 텍스트로 따뜻하고 아늑한 베이커리 분위기를 연출했습니다. '오늘의 빵'이라는 컨셉에 맞춰 친근하면서도 먹음직스러운 느낌을 강조합니다.</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -267,8 +358,8 @@
                                 <img src="./img/banner1 (2).jpg" alt="배너2 이미지 - 나이키 발렌타인 기프트박스 행사 이미지">
                             </figure>
                             <div class="banner-txt">
-                                <h4>나이키 배너 - 발렌타인 기프트 박스</h4>
-                                <p>전체적으로 나이키의 에너지와 발렌타인 시즌의 설렘을 동시에 담기 위해 강렬한 컬러 포인트와 균형 잡힌 여백을 활용했습니다.</p>
+                                <h4>온블레 - 아침 식사 빵 메뉴 배너</h4>
+                                <p>밝은 노란색/베이지색 바탕에 토스트와 베이글, 재료를 자연스럽게 배치하여 건강하고 신선한 아침 식사 느낌을 강조합니다. 간결한 메시지와 정갈한 레이아웃으로 고객에게 신뢰감을 주며 편안함을 느끼게 합니다.</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -276,8 +367,8 @@
                                 <img src="./img/banner1 (3).jpg" alt="배너3 이미지 - 화이트 데이 행사 이미지">
                             </figure>
                             <div class="banner-txt">
-                                <h4>화이트데이 이벤트 배너</h4>
-                                <p>화이트데이의 달콤한 분위기를 담기 위해 화이트 톤과 파스텔 포인트 컬러를 활용해 부드럽고 산뜻한 무드를 연출했습니다.</p>
+                                <h4>온블레 신제품 - NEW BAGEL</h4>
+                                <p>대비되는 컬러와 굵은 서체의 텍스트를 반복 배치하여 활기차고 경쾌한 무드를 연출합니다. 신제품 베이글 단면 이미지를 중심으로 강조하여 트렌디하고 재미있는 신제품 출시를 시각적으로 알립니다.</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -285,8 +376,8 @@
                                 <img src="./img/banner4.jpg" alt="배너4 이미지 - 블랙프라이데이 이벤트 할인행사 이미지">
                             </figure>
                             <div class="banner-txt">
-                                <h4>블랙프라이데이 배너</h4>
-                                <p>블랙프라이데이의 강렬한 분위기를 살리기 위해 블랙과 핑크 포인트 컬러를 중심으로 강한 대비감을 표현했습니다.</p>
+                                <h4>인센트 - 2025 F/W 뉴 컬렉션</h4>
+                                <p>향수 제품 클로즈업 이미지와 차분한 베이지 톤, 돌 질감의 배경을 활용하여 세련되고 우아한 분위기를 연출했습니다. 'NEW'와 컬렉션 정보를 명시하며, 가을/겨울 신제품의 고급스럽고 감각적인 이미지를 전달합니다.</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -294,8 +385,8 @@
                                 <img src="./img/benner2.jpg" alt="배너4 이미지 - 블랙프라이데이 이벤트 할인행사 이미지">
                             </figure>
                             <div class="banner-txt">
-                                <h4>블랙프라이데이 배너</h4>
-                                <p>블랙프라이데이의 강렬한 분위기를 살리기 위해 블랙과 핑크 포인트 컬러를 중심으로 강한 대비감을 표현했습니다.</p>
+                                <h4>인센트 - 나의 시그니처 향을 찾다</h4>
+                                <p>우측에 독특한 전시품이 있는 장식장을 배치하여 향에 대한 전문성과 신비로움을 강조합니다. 밝고 여백이 많은 배경에 간결한 타이포그래피를 사용하여 전문적이고 고급스러운 브랜드 이미지를 전달합니다.</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -303,8 +394,8 @@
                                 <img src="./img/benner3.jpg" alt="배너4 이미지 - 블랙프라이데이 이벤트 할인행사 이미지">
                             </figure>
                             <div class="banner-txt">
-                                <h4>블랙프라이데이 배너</h4>
-                                <p>블랙프라이데이의 강렬한 분위기를 살리기 위해 블랙과 핑크 포인트 컬러를 중심으로 강한 대비감을 표현했습니다.</p>
+                                <h4>인센트 - FOR THOSE WHO SEEK SUBTLETY</h4>
+                                <p>흰 꽃을 포커스 아웃하여 몽환적이고 부드러운 분위기를 조성하고, 화이트/그레이 톤으로 은은함을 강조합니다. 영문 슬로건과 간결한 설명만 배치하여 절제되고 우아한 프리미엄 브랜드의 감성을 전달합니다.</p>
                             </div>
                         </div>
                     </div>
@@ -315,7 +406,7 @@
             const bannerSlider = new Swiper(".banner-slider",{
                 slidesPerView: 1,
                 spaceBetween: 14,
-                  // 🔥 추가된 부분
+                
                 navigation: {
                     nextEl: ".banner-next",
                     prevEl: ".banner-prev",
@@ -342,9 +433,9 @@
             })
         </script>
 
-    <div class="project">
-
-                <h3>INSCENT Web Project</h3>
+    <div class="project" id="project"> 
+    
+                <h3>Responsive Web Project - Inscent</h3>
                 <p>
                     기획부터 와이어프레임, 시안 디자인, 프로토타입까지 전 과정을 직접 수행하였습니다.<br>
                     반응형 웹디자인을 적용하여 다양한 디바이스에서의 접근성을 높이고<br>직관적인 UI를 통해 브랜드의 정체성을 효과적으로 만들려고 노력했습니다.
@@ -358,12 +449,18 @@
                     <figure class="project-img">
                         <!-- 상세 이미지 -->
                          <picture>
-                            <source media="(max-width:768px)" srcset="./img/moov_tab.jpg">
-                            <img src="./img/moov_pc.jpg" alt="프로젝트 상세페이지 이미지">
+                            <source media="(max-width:768px)" srcset="./img/inscent.jpg">
+                            <img src="./img/inscent.jpg" alt="프로젝트 상세페이지 이미지">
                          </picture>
                     </figure>
                 </section>
 
+                <div class="project">
+                <h3>Responsive Web Project - onble</h3>
+                <p>
+                    기획부터 와이어프레임, 시안 디자인, 프로토타입까지 전 과정을 직접 수행하였습니다.<br>
+                    반응형 웹디자인을 적용하여 다양한 디바이스에서의 접근성을 높이고<br>직관적인 UI를 통해 브랜드의 정체성을 효과적으로 만들려고 노력했습니다.
+                </p>
                 <section class="project-frame">
                     <ul class="project-sticky-menu">
                         <li><a href="#" target="_blank">New Branding Web</a></li>
@@ -372,32 +469,33 @@
                     <figure class="project-img">
                         <!-- 상세 이미지 -->
                          <picture>
-                            <source media="(max-width:768px)" srcset="./img/moov_tab.jpg">
-                            <img src="./img/moov_pc.jpg" alt="프로젝트 상세페이지 이미지">
+                            <source media="(max-width:768px)" srcset="./img/onble.jpg">
+                            <img src="./img/onble.jpg" alt="프로젝트 상세페이지 이미지">
                          </picture>
                     </figure>
                 </section>
-
-                <section class="project-frame">
-                    <ul class="project-sticky-menu">
-                        <li><a href="#" target="_blank">New Branding Web</a></li>
-                        <li><a href="#" target="_blank">Figma</a></li>
-                    </ul>
-                    <figure class="project-img">
-                        <!-- 상세 이미지 -->
-                         <picture>
-                            <source media="(max-width:768px)" srcset="./img/moov_tab.jpg">
-                            <img src="./img/moov_pc.jpg" alt="프로젝트 상세페이지 이미지">
-                         </picture>
-                    </figure>
-                </section>
+              </div>
 
             </div>
 
-
-
+            <div class="contact" id="contact">
+                <p class="ct1">Web Designer <strong>박채은</strong></p>
+                <h2>
+                    Thank you for<br>
+                    reviewing my portfolio.
+                </h2>
+                <p class="ct2">앞으로 더 성장하는 모습 보여드리겠습니다.</p>
+                <h4>Contact Me</h4>
+                <ul class="contact-menu">
+                    <li><a href="mailto:ppccee37@gmail.com">ppccee37@naver.com</a></li>
+                    <li><a href="tel:01089067610">010.8906.7610</a></li>
+                </ul>
+            </div>
 
     </main>
+
+
+    
 
 </body>
 </html>
