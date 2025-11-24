@@ -77,24 +77,28 @@
         font-family: 'Pretendard';
     }
     .header-smart {
-    display: block;
-    z-index: 100000;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 71px;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-    border-radius: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.6s ease 0s;
-}
+        display: block;
+        z-index: 100000;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 71px;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.6s ease 0s;
+    }
+    /* .contact h2{
+        font-size: 3rem;
+    } */
+
 
 }
