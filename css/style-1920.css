@@ -147,7 +147,9 @@ body {
 .main::-webkit-scrollbar {
     display: none; /* 스크롤바 숨김 (Chrome) */
 }
-
+.line {
+    margin-bottom: 1.8rem;
+}
 .flower{
     margin-right: 1.5rem;
 }
@@ -828,7 +830,7 @@ body {
     animation:trainb 20s linear 0s infinite;
 }
 .project {
-    margin-top: 9rem;
+    margin-top: 12rem;
 }
 .project-img{
     text-align: center;
@@ -838,11 +840,13 @@ body {
 }
 .project p {
     font-size: 1rem;
-    color: #405181;
+    color: #000000;
     font-family: 'Pretendard';
     font-weight: 200;
     line-height: 1.5;
     margin-top: 1rem;
+    width: 45%;
+    display: inline-block;
 }
 .contact {
     background-color: #f9f9f4;
