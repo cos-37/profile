@@ -237,7 +237,7 @@
         color: #000;
         font-weight: 200;
         line-height: 1.5;
-        max-width: 79%;
+        max-width: 100%;
         text-align: left;
         margin-left: 1rem;
     }
@@ -248,6 +248,16 @@
         width: 100%;
         margin-left: 0rem;
         /* margin-bottom: 1rem; */
+    }
+    .project p {
+        font-size: 1rem;
+        color: #000000;
+        font-family: 'Pretendard';
+        font-weight: 200;
+        line-height: 1.5;
+        margin-top: 1rem;
+        width: 63%;
+        display: inline-block;
     }
     .project-sticky-menu {
         display: flex;
@@ -399,19 +409,25 @@
         margin-bottom: 0px;
     }
     .popup-showcase {
-        margin-top: 44rem;
+        margin-top: 33.5rem;
+        padding: 7rem 1rem;
+        text-align: center;
     }
     .section-head {
         text-align: center;
         /* margin-bottom: 10px; */
     }
     .banner {
-        margin-top: 51rem;
+        margin-top: 36.5rem;
+        padding: 7rem 1rem;
+        text-align: center;
+    }
+    .project {
+        margin-top: 6rem;
     }
     .project h3 {
         width: 60%;
-        margin-left: 6rem;
-        /* margin-bottom: 1rem; */
+        display: inline-block;
     }
     .project p {
         font-size: 1rem;
@@ -419,7 +435,7 @@
         font-weight: 200;
         line-height: 1.5;
         margin-top: 1rem;
-        width: 70%;
+        width: 80%;
         display: inline-block;
     }
     .project-sticky-menu {
