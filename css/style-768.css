@@ -456,13 +456,10 @@
         text-align: center;
         margin-bottom: 11rem;
     }
-    /* .contact h2 {
+    .contact h2 {
         font-size: 2rem;
-        line-height: 1;
-        text-transform: uppercase;
-        margin-bottom: 3rem;
-        font-weight: 200;
-    } */
+    }
+    
     /* .contact span{
         transition: 1s;
         display: inline-block;
