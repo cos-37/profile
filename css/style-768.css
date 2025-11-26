@@ -409,8 +409,8 @@
         margin-bottom: 0px;
     }
     .popup-showcase {
-        margin-top: 33.5rem;
-        padding: 7rem 1rem;
+        margin-top: 0rem;
+        padding: 0rem 0rem;
         text-align: center;
     }
     .section-head {
@@ -418,12 +418,12 @@
         /* margin-bottom: 10px; */
     }
     .banner {
-        margin-top: 36.5rem;
-        padding: 7rem 1rem;
+        margin-top: 9rem;
+        /* padding: 7rem 1rem; */
         text-align: center;
     }
     .project {
-        margin-top: 6rem;
+        margin-top: 9rem;
     }
     .project h3 {
         width: 60%;
