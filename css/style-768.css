@@ -200,13 +200,13 @@
         margin-bottom: 2rem;
     }
     .grid-skill {
-        display: grid;
+    display: grid;
         grid-template-columns: repeat(1,minmax(40px,1fr));
         gap: 2rem;
         text-align: left;
         margin-top: 3.5rem;
-        width: 75%;
-        margin-left: 5rem;
+        width: auto;
+        margin-left: 0;
         /* align-items: center; */
     }
     .grid {
@@ -214,7 +214,7 @@
         width: 70%;
     }
     .popup-showcase {
-        margin-top: 66rem;
+        margin-top: 6rem;
     }
     .section-head h2 {
         text-align: center;
@@ -229,7 +229,7 @@
         text-align: center;
     }
     .banner {
-        margin-top: 77rem;
+        margin-top: 6rem;
     }
     .banner-txt>p {
         font-size: 0.8rem;

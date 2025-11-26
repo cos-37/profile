@@ -544,7 +544,7 @@ body {
     width: 80%;
 }
 .popup-showcase {
-    margin-top: 17rem;
+    margin-top: 6rem;
 }
 /* Card */
 .card {
@@ -673,6 +673,7 @@ body {
 .popup-slider {
     width: 90%;
     margin: 0 auto;
+    height: auto!important;
 }
 
 .swiper-slide {
@@ -694,7 +695,7 @@ body {
 }
 
 .banner {
-    margin-top: 24rem;
+    margin-top: 9rem;
 }
 /* 🔥 배너 좌우 버튼 */
 .banner-slider{
