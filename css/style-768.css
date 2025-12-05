@@ -460,6 +460,9 @@
         font-size: 2rem;
     }
     
+    .thumb{
+        aspect-ratio:initial;
+        }
     /* .contact span{
         transition: 1s;
         display: inline-block;
