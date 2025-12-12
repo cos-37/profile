@@ -1,0 +1,67 @@
+/* 한줄에 3개 정렬 */
+.detail-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* 개별 아이템 */
+.detail-item {
+    width: 30%;
+    text-align: center;
+}
+
+/* 썸네일 이미지 */
+.detail-thumb {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.detail-thumb:hover {
+    transform: scale(1.03);
+}
+
+/* 텍스트 */
+.detail-title {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    z-index: 9999;
+    padding: 40px 0;
+}
+
+/* 전체 이미지 */
+.modal-img {
+    max-width: 90%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* X 닫기 버튼 */
+.modal-close {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+}

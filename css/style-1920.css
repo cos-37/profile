@@ -539,9 +539,9 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    align-items: start;
+    align-items: stretch;
     margin-top: 1.5rem;
-    width: 80%;
+    width: auto;
 }
 .popup-showcase {
     margin-top: 6rem;
@@ -613,6 +613,98 @@ body {
     background:var(--accent);
     color:#fff;
 }
+
+.detailpage {
+    margin-top: 6.5rem;
+    padding: 7rem 2.5rem;
+    text-align: center;
+}
+.detailpage h3{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.detailpage p {
+    font-family: 'Pretendard';
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+}
+.detailpage-p{
+    color: #000;
+    font-weight: 200;
+}
+
+/* 한줄에 3개 정렬 */
+.detail-container {
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+    grid-template-columns: repeat(3,1fr);
+}
+
+/* 개별 아이템 */
+.detail-item {
+    width: auto;
+    text-align: center;
+}
+
+/* 썸네일 이미지 */
+.detail-thumb {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.detail-thumb:hover {
+    transform: scale(1.03);
+}
+
+/* 텍스트 */
+.detail-title {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    z-index: 9999;
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+
+/* 전체 이미지 */
+.modal-img {
+    max-width: 90%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* X 닫기 버튼 */
+/* .modal-close {
+    position: fixed;
+    top: 0.75rem;
+    right: 14rem;
+    font-size: 4.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 10000; */
+
+
 
 /* .popup {
     margin-top: 10rem;
@@ -783,13 +875,16 @@ body {
 
 .project-sticky-menu {
     display: flex;
-    gap: 52rem;
+    /* gap: 52rem; */
     position: sticky;
     left: 0;
     top: -4rem;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: -3rem;
     font-family: 'Pretendard';
+    width: 100%;
+    /* border: 1px solid red; */
+    font-size: 0.8rem;
 }
 /* .all{
     display: flex;

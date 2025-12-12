@@ -11,6 +11,7 @@
     <!-- 링크연결 -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./js/qwe.js">
     <link rel="stylesheet" href="./css/style-1920.css">
     <link rel="stylesheet" href="./css/style-1024.css">
     <link rel="stylesheet" href="./css/style-768.css">
@@ -39,6 +40,7 @@
             <li><a href="#aboutme">about me</a></li>
             <li><a href="#skill">skill</a></li>
             <li><a href="#popup">popups</a></li>
+            <li><a href="#detailpage">detail page</a></li>
             <li><a href="#banner">banners</a></li>
             <li><a href="#project">projects</a></li>
             <li><a href="#contact">contact</a></li>
@@ -296,6 +298,51 @@
                 speed:2500
             })
         </script>
+
+
+        <div class="detailpage" id="detailpage">
+        <h3>Detail Page</h3>
+        <p class="detailpage-p">다양한 레퍼런스와 트렌드를 면밀히 분석하고, <br>
+          이를 저만의 감각과 해석으로 재구성하여 완성한 상세페이지 디자인입니다.</p>
+        
+        <div class="detail-container">
+
+          <!-- 1번 상세페이지 -->
+            <div class="detail-item">
+                <img src="./img/tumb3.png" class="detail-thumb" onclick="openModal('./img/tumb-all3.jpg')" alt="상세페이지3">
+                  <p class="detail-title">상세페이지 디자인 01</p>
+            </div>
+          <!-- 2번 상세페이지 -->
+            <div class="detail-item">
+                <img src="./img/tumb1.png" class="detail-thumb" onclick="openModal('./img/tumb-all.jpg')" alt="상세페이지1">
+                <p class="detail-title">상세페이지 디자인 02</p>
+            </div>
+        
+          <!-- 3번 상세페이지 -->
+            <div class="detail-item">
+                <img src="./img/tumb2.jpg" class="detail-thumb" onclick="openModal('./img/tumb-all2.jpg')" alt="상세페이지2">
+                <p class="detail-title">상세페이지 디자인 03</p>
+            </div>
+
+        </div>
+
+
+    <!-- 상세페이지 전체보기 모달 -->
+    <div id="detailModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img id="modalImage" class="modal-img">
+    </div>
+
+    <script>
+    function openModal(imgSrc) {
+        document.getElementById('detailModal').style.display = "flex";
+        document.getElementById('modalImage').src = imgSrc;
+    }
+
+    function closeModal() {
+        document.getElementById('detailModal').style.display = "none";
+    }
+    </script>
 
          <div class="banner" id="banner">
            

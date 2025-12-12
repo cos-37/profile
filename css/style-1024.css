@@ -70,6 +70,31 @@
         margin-top: 1.5rem;
         width: 100%;
     }
+
+    /* .detailpage{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        align-items: start;
+        margin-top: 1.5rem;
+        width: 100%;
+    } */
+
+    .modal-img {
+        max-width: 60%;
+        border-radius: 10px;
+        margin: auto;
+    }
+     /* .modal-close {
+        position: fixed;
+        top: 1.75rem;
+        right: 11rem;
+        font-size: 4.5rem;
+        color: #ffffff;
+        cursor: pointer;
+        z-index: 10000;
+    } */
+
     .project-sticky-menu {
         display: flex;
         gap: 4rem;
